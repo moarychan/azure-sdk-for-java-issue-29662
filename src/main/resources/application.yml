@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    azure:
+      active-directory:
+        b2c:
+          enabled: true
+          base-uri: https://xxxb2c1.b2clogin.com/xxxadb2c1.onmicrosoft.com
+          credential:
+            client-id: xxx-client-id-1-in-xxxb2c1
+            client-secret: xxx
+          login-flow: sign-up-or-sign-in
+          logout-success-url: http://localhost:8080/login
+          user-flows:
+            password-reset: B2C_1_passwordreset
+            profile-edit: B2C_1_profileediting
+            sign-up-or-sign-in: B2C_1_signuporsignin
+          profile:
+            tenant-id: xxx
